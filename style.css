@@ -1,0 +1,1894 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-image: url('./Background_lib/medical_bg1.jpg');
+    background-size: cover;  /* Ensures the image covers the entire body */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* #noticeModal {
+    top: 10%;
+    width: 40%;
+    height: 60%;
+    z-index: 100;
+} */
+
+#noticeModal{
+    height: 100vh; 
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background */
+    backdrop-filter: blur(2px); /* Applies blur effect to the background behind the modal */
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    
+}
+
+.topLine {
+    margin-top: -2%;
+    background-color: rgb(255, 94, 1);
+    /* border: 1px solid blue; */
+    box-shadow: 1px 1px 15px orange;
+    width: 100%;
+    height: 5px;
+    padding-bottom: 5px;
+}
+
+#noticeModalContentCover {
+    /* margin-top: 1%; */
+    width: 100%;
+    height: 98vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+
+#noticeModalContent {
+    border: 4px outset rgb(230, 229, 229);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    /* top: 10%; */
+    width: 50%;
+    height: 95%;
+    z-index: 100;
+    justify-content: center;
+
+}
+
+.noticeModalContentAlignment {
+    width: 100%;
+    height: 100%;
+    margin-top: 0%;
+    /* height: 50%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dataSecurityInfo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.noticeContent {
+    width: 90%;
+    /* border: 1px solid red; */
+    margin-top: 0%;
+    margin-left: 5%;
+}
+
+.displayFlexRow {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+}
+
+.fontBoldandWidth {
+    font-weight: bold;
+    /* width: 300px; */
+    display: flex;
+    flex: 1;
+
+}
+
+.verticalSpace5px {
+    height: 10px;
+}
+
+.leftAlignment {
+    display: flex;
+    justify-content: left;
+    flex: 1.8;
+}
+
+#notice {
+    width: 100%;
+    border: 2px solid rgb(255, 94, 1);
+    box-shadow: 1px 1px 20px rgb(248, 198, 107);
+    /* background-image: linear-gradient(white, yellow, white); */
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#noticeContent {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.summaryTitleStyle {
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+    color: rgb(215, 7, 7);
+}
+
+.keyFeatureTitleStyle {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+    color: rgb(215, 7, 7);
+}
+
+.noticeTitleStyle {
+    font-weight: bold;
+    color: rgb(215, 7, 7);
+    text-decoration: underline;
+}
+
+.italicStyle {
+    font-style: italic;
+}
+
+.noticeFooter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#menuNav {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 0; */
+    left: 62%;
+}
+
+.menuButton {
+    color: black;
+    /* text-shadow: -0.7px 0px black, 0px 0.7px black, 0.7px 0px black, 0px -0.7px black; */
+    /* padding: 10px; */
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px outset rgb(208, 255, 255);
+    border-radius: 16px;
+    backdrop-filter: blur(1px);
+    /* background-image: linear-gradient(white, transparent, white); */
+    background-image: linear-gradient(to bottom, rgb(192, 207, 206) 0%, transparent 10%, rgb(255, 255, 255) 30%, transparent 40%, rgb(187, 212, 209) 75%, transparent 100%);
+
+}
+
+#workCompanyDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* height: 108%; */
+    display: flex;
+    flex-direction: row;
+}
+
+.workCompany {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    width: 23%;
+    color: black;
+    font-size: 20px;
+}
+
+.workCompanyTitle {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    margin-left: 20px; 
+    /* color: rgb(74, 74, 242); */
+    color: rgb(69, 106, 255);
+    text-shadow: -0.5px 0px white, 0px 0.5px white, 0.5px 0px white, 0px -0.5px white;
+
+    font-family: "Helvetica Neue", Tahoma, Geneva, sans-serif;
+}
+
+.metroLogo {
+    background-image: url('./logo/metroLogo.png');
+    position: relative;
+    background-size: contain;  /* Ensures the whole image fits within the container */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    background-position: center;  /* Centers the image within the container */
+    width: 60px;
+    height: auto;
+    transform: scale(1.2);
+    margin-top: -10px;
+    margin-left: 5px;
+
+}
+
+#imagesNav {
+    width: 50%;
+    height: 60px;
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    /* border: 1px outset silver; */
+    overflow: visible;
+    animation: runRightToLeft 4s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes runRightToLeft {
+    0% {
+        transform: translateX(2%);
+        z-index: 55;
+    }
+    50% {
+        transform: translateX(0%);
+        z-index: 55;
+    }
+    100% {
+        transform: translateX(2%);
+        z-index: 55;
+    }
+}
+
+.pic {
+    /* position: relative; */
+    z-index: 1;
+    transform: scale(1); /* Scale down to 50% of its original size */
+    /* height:100px; */
+    background-size: contain;  /* Ensures the whole image fits within the container */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    background-position: center;  /* Centers the image within the container */
+    width: 60px;
+    height: auto;
+    /* border-radius: 16px; */
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    box-shadow: 1px 1px 15px white;
+    cursor: pointer;
+}
+
+.pic:hover {
+    transform: scale(4);
+    position: relative;
+    border-radius: 100px;
+    box-shadow: 1px 1px 15px rgb(255, 255, 255);
+    top: 190%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.pic1 {
+    background-image: url('./Picture_Items/embPosition.jpg');
+}
+
+.pic2 {
+    background-image: url('./Picture_Items/topNavyFemale.jpg');
+}
+
+.pic3 {
+    background-image: url('./Picture_Items/topNavyFemale3.jpg');
+}
+
+.pic4 {
+    background-image: url('./Picture_Items/topWhiteFemale.jpg');
+}
+
+.pic5 {
+    background-image: url('./Picture_Items/topCaribeanFemale.jpg');
+}
+
+.pic6 {
+    background-image: url('./Picture_Items/topBlackFemale.jpg');
+}
+
+.pic7 {
+    background-image: url('./Picture_Items/jacketSteelFemale.jpg');
+}
+
+.pic8 {
+    background-image: url('./Picture_Items/topBlackMan1.jpg');
+}
+
+.pic9 {
+    background-image: url('./Picture_Items/topOliveMan.jpg');
+}
+
+.pic10 {
+    background-image: url('./Picture_Items/topRoyalBlueMan.jpg');
+}
+
+.pic11 {
+    background-image: url('./Picture_Items/bottomNavyFemale.jpg');
+}
+
+.pic12 {
+    background-image: url('./Picture_Items/bottomWhiteFemale.jpg');
+}
+
+.pic13 {
+    background-image: url('./Picture_Items/bottomNavyMan.avif');
+}
+
+.pic14 {
+    background-image: url('./Picture_Items/bottomBlackMan.jpg');
+}
+
+.pic15 {
+    background-image: url('./Picture_Items/bottomOliveMan.jpg');
+}
+
+.pic16 {
+    background-image: url('./Picture_Items/bottomRoyalBlueMan.jpg');
+}
+
+.menuSrcStyle {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    /* text-shadow: -0.7px 0px black, 0px 0.7px black, 0.7px 0px black, 0px -0.7px black; */
+}
+
+.menuSrcStyle:hover {
+    color: rgb(255, 98, 0);
+}
+
+.menuButton:hover {
+    color: orange;
+}
+
+.menuButton:focus {
+    border: 1px inset rgb(208, 255, 255);
+}
+
+
+#headNav {
+    /* border: 2px solid red;  */
+    /* background-image: url('medical_background1.webp'); */
+    
+    /* height: 100%; */
+    
+    /* background-image: url('medical_background6.jpg'); */
+    background-size: cover;  /* Ensures the image covers the entire body */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 12.5%;
+}
+
+#bodyNav {
+    background-image: url('medical_background6.jpg');
+    background-size: cover;  /* Ensures the image covers the entire body */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    display: flex;
+    /* border: 2px solid blue; */
+    flex-direction: row;
+    /* max-height: 590px; */
+    height: 75%;
+}
+
+#footer {
+
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid orange; */
+    /* min-height: 120px; */
+    justify-content: center;
+    align-items: flex-end;
+    border-top: 1px solid silver;
+    height: 12.5%;
+
+}
+
+#footer p {
+    /* margin-bottom: 0; */
+    /* min-height: 10%; */
+}
+
+.organizationLogo {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* border: 1px solid white; */
+}
+
+.footerContent {
+    display: flex;
+    width: 100%;
+    height: 25%;
+    /* text-align: center; */
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.expandVertical {
+    /* height: 2%; */
+}
+
+.expandSpace {
+    width: 30px;
+}
+
+.logo {
+    height: 100%;
+}
+
+img {
+    border: 2px outset rgb(148, 146, 146);
+    border-radius: 8px;
+    box-shadow: 1px 1px 20px white;
+}
+
+.borderRadius6 {
+    border-radius: 6px;
+}
+
+
+
+.dataTableSize {
+    width: 100%;
+}
+
+.centerCell {
+    text-align: center;
+}
+
+.rightCell {
+    text-align: right;
+}
+
+.bottomCell {
+    margin-bottom: 10px;
+}
+
+.spaceBottom {
+    margin-bottom: -10px;
+}
+
+.rightTextCell {
+    text-align: right;
+}
+
+.boldText {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+/*----- Left Nav (TOP) ------*/
+#leftNav {
+    flex: .8;
+    width: 100%;
+    /* border: 2px dashed red; */
+}
+
+#filter {
+    display: block;
+    height: 27%;
+    width: 90%;
+    margin-left: 5%;
+    border: 3px outset rgb(241, 242, 242);
+    margin-bottom: 10px;
+    border-radius: 4px;
+    backdrop-filter: blur(5px);
+    border-left-width: 1px;
+    border-bottom-width: 2px;
+}
+
+#filter:hover {
+    box-shadow: 1px 1px 25px white;
+    transition: box-shadow 0.5s ease;
+}
+
+#searchNav {
+    font-weight: bold;
+    border: 1px solid silver;
+    border-radius: 4px;
+    /* background-image: linear-gradient(white, silver, white); */
+    background-image: linear-gradient(to bottom, rgb(192, 207, 206) 0%, transparent 10%, rgb(255, 255, 255) 30%, transparent 40%, rgb(187, 212, 209) 75%, transparent 100%);
+
+    margin-bottom: 10px;
+}
+
+.filterMethod {
+    width: 100%;
+    /* margin-right: 20px; */
+}
+
+.filterDetails {
+    display: flex;
+    width: 97%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.centerInputRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 20px;
+    margin-left: 5%;
+}
+
+
+
+.filterInputStyle {
+    background-image: linear-gradient(to bottom, rgb(192, 207, 206) 0%, transparent 10%, rgb(255, 255, 255) 30%, transparent 40%, rgb(187, 212, 209) 75%, transparent 100%);
+    background-color: transparent;
+    border-radius: 100px;
+    border: outset silver 1px;
+    width: 50%;
+    cursor: pointer;
+    outline: none;
+}
+
+.filterInputStyle:hover {
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 15px white;
+    transition: box-shadow 0.5s ease;
+}
+
+.filterInputStyle:focus {
+    border: 1.5px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 15px white;
+    /* box-shadow: 0px 0px 15px rgb(252, 214, 111); */
+    color: rgb(0, 114, 254);
+    transition: box-shadow 0.5s ease;
+    /* border-color: rgb(0, 179, 255); */
+}
+
+.addEmpInputStyle {
+    border: 1px outset rgb(147, 146, 146);
+    /* background-color: #f7e9e9; */
+    background-color: transparent;
+    /* backdrop-filter: blur(2px); */
+    height: 80%;
+    background-image: linear-gradient(to bottom, rgb(192, 207, 206) 0%, transparent 10%, rgb(255, 255, 255) 30%, transparent 40%, rgb(187, 212, 209) 75%, transparent 100%);
+    border-radius: 50px;
+    outline: none;
+}
+
+.addEmpInputStyle:hover {
+    border: 1px solid rgb(247, 193, 193);
+    box-shadow: 0px 0px 15px rgb(249, 218, 218);
+    background-color: rgb(251, 251, 251);
+    transition: box-shadow 0.5s ease;
+}
+
+.addEmpInputStyle:focus {
+    background-color: rgb(251, 251, 251);
+    border: 1px solid rgb(247, 193, 193);
+    box-shadow: 0px 0px 15px rgb(249, 218, 218);
+}
+
+
+
+
+#voucherAndSummaryTableNav {
+    height: 39%;
+    width: 90%;
+    margin-left: 15px;
+    border: 3px outset rgb(252, 255, 255);
+    border-radius: 4px;
+    /* backdrop-filter: blur(25px); */
+    border-left-width: 1px;
+    border-bottom-width: 1.5px;
+}
+
+#voucherAndSummaryTableNav:hover {
+    box-shadow: 1px 1px 25px white;
+    transition: box-shadow 0.5s ease;
+}
+
+.voucherSummaryCellBlur {
+    backdrop-filter: blur(5px);
+}
+
+.voucherSummaryCellBlurFile {
+    backdrop-filter: blur(2px); 
+}
+
+.voucherSummaryTable {
+    border: .5px solid rgb(226, 226, 226);
+    
+    border-collapse: collapse;
+    /* border: 1px solid silver; */
+    border-top-right-radius: 15px;
+    width: 100%;
+}
+
+.voucherTracker {
+    background-image: linear-gradient(to bottom, transparent 0%, white 15%, transparent 50%, transparent 100%);
+    backdrop-filter: blur(.2px);
+}
+
+.voucherStatusCell {
+    border-radius: 8px;
+}
+
+.completeSumColor {
+    /* background-image: linear-gradient(white, rgb(198, 250, 198), white); */
+    background-image: linear-gradient(to bottom, rgb(173, 251, 173) 0%, white 15%, rgb(173, 251, 173) 50%, rgb(173, 251, 173) 100%);
+
+}
+
+.subtitleCellSize {
+    width: 40%;
+}
+
+.subTitleCellBackG {
+    background-image: linear-gradient(to bottom, transparent 0%, white 15%, transparent 50%, transparent 100%);
+}
+
+.paddingHorizontal10 {
+    width: 5px;
+}
+
+.paddingVertical10 {
+    height: 10px;
+}
+
+.fa-file-text-o {
+/*    color: white;*/
+background-color: white;
+}
+
+
+.green {
+	background-image: linear-gradient(white, lime, white);
+    animation: validVoucherAnimation 3s ease-in-out infinite;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@keyframes validVoucherAnimation {
+	0% {
+		box-shadow: 0px 0px 1px lime;
+	}
+
+    20% {
+		box-shadow: 0px 0px 5px lime;
+	}
+    
+    40% {
+		box-shadow: 0px 0px 10px lime;
+	}
+
+    60% {
+		box-shadow: 0px 0px 45px lime;
+	}
+
+	80% {
+		box-shadow: 0px 0px 10px lime;
+	}
+
+	100% {
+		box-shadow: 0px 0px 5px lime;
+	}
+}
+
+.red {
+	color: white;
+	background-image: linear-gradient(white, red, white);
+	animation: expiredAnimation 1s ease-in-out infinite;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@keyframes expiredAnimation {
+	0% {
+		box-shadow: 0px 0px 1px red;
+	}
+
+	50% {
+		box-shadow: 0px 0px 20px red;
+	}
+
+	100% {
+		box-shadow: 0px 0px 20px rgb(249, 234, 22);
+	}
+}
+
+.orange {
+	background-image: linear-gradient(white, orange, white);
+    border-radius: 6px;
+}
+
+          /* Progress Bar (TOP) */
+.percentComplete {
+    position: relative;
+    /*width: 100%;*/
+    height: 20px; /* Height of the progress bar */
+    background: linear-gradient(to top, gray 0%, gray 100%); /* Gradient for the background */
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  #progressBarCover {
+    /* width: 50%; */
+  }
+
+  .progressBar {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    animation: progressBarAnimation 0.5s ease-in-out infinite;
+  }
+  
+  .progressBar div {
+    flex: 1;
+    background: linear-gradient(to top, #76c7c0 0%, lime 50%, #B2FFBC 70%, lime 100%);
+    transition: all 0.3s ease-in-out;
+  
+  }
+  
+  .percenPortionCompleted {
+    background: linear-gradient(to top, #76c7c0 0%, lime 100%); /* Gradient for completed portions */
+    
+  }
+  
+  .progressBar div:not(.percenPortionCompleted) {
+      border: solid 1;
+    background: linear-gradient(to top, gray 0%,	gray); /* Gradient for incomplete portions */
+  }
+  
+  @keyframes progressBarAnimation {
+    0% {
+      transform: translateX(-2%);
+    }
+  
+    20% {
+      transform: translateX(-1.5%);
+    }
+  
+    40% {
+      transform: translateX(-1%);
+    }
+  
+    50% {
+      transform: translateX(-0.5%);
+    }
+  
+    60% {
+      transform: translateX(-1%);
+    }
+  
+    80% {
+      transform: translateX(-1.5%);
+    }
+  
+    100% {
+      transform: translateX(-2%);
+    }
+  }
+             /* Progress Bar (BOTTOM) */
+
+
+.doneTextStyle {
+	color: black;
+	font-size: 14px;
+	font-weight: bold;
+	/* background-image: linear-gradient(white, rgb(173, 251, 173), white); */
+    background-image: linear-gradient(to bottom, rgb(210, 251, 210) 0%, white 15%, rgb(210, 251, 210) 50%, rgb(210, 251, 210) 100%);
+}
+
+.empComplete {
+	color: blue !important;
+}
+
+.notDoneTextStyle {
+	color: black;
+	font-size: 14px; 
+	font-weight: bold;
+	width: 90px;
+	background-image: linear-gradient(white, rgb(248, 226, 184), white);
+    background-image: linear-gradient(to bottom, rgb(248, 226, 184) 0%, white 15%, rgb(248, 226, 184) 50%, rgb(248, 226, 184) 100%);
+
+}
+
+.empIncomplete {
+	color: red !important;
+}
+
+
+
+.fa-cloud-download {
+	/*background-image: linear-gradient(white, yellow, white);*/
+	color: deepskyblue;
+	/*background-color: white;*/
+}
+
+
+
+
+#addEmpNav {
+    display: block;
+    height: 26%;
+    width: 90%;
+    margin-left: 15px;
+    border: 3px outset rgb(241, 242, 242);
+    border-radius: 4px;
+    /* justify-content: center; */
+    backdrop-filter: blur(2px);
+    border-left-width: 1px;
+    border-bottom-width: 2px;
+    outline: none;
+}
+
+#addEmpNav:hover {
+    /* box-shadow: 1px 1px 15px rgb(251, 214, 187); */
+    box-shadow: 1px 1px 25px white;
+    transition: box-shadow 0.5s ease;
+}
+
+.cyanBorder {
+    width: 100%;
+    height: 99.8%;
+    box-shadow: 1px 1px 8px rgb(181, 255, 255);
+}
+
+#addEmpTitle {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid silver;
+    border-radius: 4px;
+    background-image: linear-gradient(white, rgb(236, 177, 157), white);
+    margin-bottom: 10px;
+}
+
+.addEmpMethod {
+    width: 100%;
+
+}
+
+.addEmpDetails {
+    display: flex;
+    flex-direction: row;
+    width: 97%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#addEmpButton, #filterButton {
+    display: flex;
+    flex-direction: row;
+    margin-left: 60%;
+    margin-bottom: 5%;
+}
+
+#filterButton {
+    margin-left: 70%;
+    height: 23px;
+}
+
+
+
+
+/*----- Left Nav (BOTTOM) ------*/
+
+/*----- Middle Nav (TOP) ------*/
+#middleNav {
+    display: block;
+    flex: 2;
+    height: 98%;
+    width: 90%;
+    margin-left: 8px;
+
+    border: 3px outset rgb(255, 255, 255);
+    /* border-right-color: rgb(141, 255, 236); */
+    backdrop-filter: blur(1.5px);
+    border-top-width: 2px;
+    border-left-width: 1px;
+    border-bottom-width: 2px;
+    /* border-right-width: 5px; */
+    /* border-left-color: rgb(214, 213, 213);
+    border-right-color: rgb(168, 164, 164);
+    border-top-width: 3px;
+    border-left-width: 2px;
+    border-right-width: 4px; */
+    border-radius: 4px;
+}
+
+#middleNav:hover {
+    box-shadow: 1px 1px 25px white;
+    transition: box-shadow 0.5s ease;
+}
+
+#searchBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+#searchInput::placeholder {
+    color: silver;
+
+
+}
+
+.searchInputClass {
+    border-radius: 10px;
+    border-style: solid;
+
+    border-color: silver;
+    outline: none;
+    border-width: 1px;
+    /* animation: searchLastNameEffection 2s ease-in-out infinite;
+    background-size: 200% 100%;
+    background-position: 100% 0; */
+}
+
+.searchInputClass:focus {
+    border-color: yellow;
+    box-shadow: -3px 1px 20px rgb(72, 247, 72);
+    
+}
+
+.searchInputClass:hover {
+    box-shadow: -3px 1px 20px rgb(72, 247, 72);
+    border-color: yellow;
+    transition: box-shadow 0.5s ease;
+}
+
+/* @keyframes searchLastNameEffection {
+    0% {
+        background-position: 100% 0;
+    }
+    50% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+} */
+
+#header {
+    width: 100%;
+    /* border: 2px dashed black; */
+}
+
+.headerManualCell {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    border: .5px solid silver;
+    border-collapse: collapse;
+    
+}
+
+.groupNameHeader {
+    /* flex: 2.5; */
+    text-align: center;
+}
+
+.searchLastNameHeader {
+    /* flex: 1; */
+    z-index: 2;
+    position: absolute;
+    right: 0;
+}
+
+#searchLastNameIcon {
+    color: rgb(101, 100, 100);
+    /* background-image: linear-gradient(to bottom, white 5%, white 80%, transparent 90%); */
+    background-image: linear-gradient(to BOTTOM, rgb(211, 211, 211) 0%, white 15%, rgb(239, 237, 237) 50%, white 90%, rgb(222, 220, 220) 100%);
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position-x: 30%;
+    background-position-y: 40%;
+    border-radius: 50%;
+    transform: scale(.9);
+}
+
+#searchLastNameIcon:hover {
+    background-image: linear-gradient(to bottom, white 5%, white 80%, transparent 90%);
+    background-position-x: 30%;
+    background-position-y: 50%;
+    background-size: 70% 60%;
+}
+
+#searchFilterIcon {
+    background-image: linear-gradient(to BOTTOM, rgb(211, 211, 211) 0%, white 15%, rgb(239, 237, 237) 50%, white 90%, rgb(222, 220, 220) 100%);
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position-x: 30%;
+    background-position-y: 40%;
+    border-radius: 50%;
+    transform: scale(.9);
+}
+
+#calendarVoucherTrackerIcon {
+    background-image: linear-gradient(to BOTTOM, rgb(211, 211, 211) 0%, white 15%, rgb(239, 237, 237) 50%, white 90%, rgb(222, 220, 220) 100%);
+    /* background-size: 50% 50%; */
+    background-repeat: no-repeat;
+    background-position-x: 30%;
+    background-position-y: 40%;
+}
+
+.numPercent {
+    width: 4%;
+}
+
+.eidPercent {
+    width: 14%;
+}
+
+.fnPercent {
+    width: 16%;
+}
+
+.lnPercent {
+    width: 17.5%;
+}
+
+.statusPercent {
+    width: 20%;
+}
+
+.actionsPercent {
+    width: 27.5%;
+}
+
+.processPercent {
+    width: 9.5%;
+}
+
+.donePercent {
+    width:7%;
+}
+
+.refreshPercent {
+    width: 5.5%;
+}
+
+.deletePercent {
+    width: 6.5%;
+}
+
+#content {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    flex-grow: 1;
+    max-height: 88%;
+    
+}
+
+.headerCellStyle {
+    /* background-image: linear-gradient(white, rgb(190, 223, 227), white); */
+    background-image: linear-gradient(to bottom, transparent 0%, white 15%, transparent 50%, transparent 100%);
+    border-radius: 6px;
+}
+
+.headerTextStyle {
+    font-weight: bold;
+    border: .5px solid silver;
+}
+
+.cellBorder {
+		/* background-image: linear-gradient(white, transparent, white); */
+		border-color: gainsboro;
+		border-collapse: collapse;
+}
+
+.processButtonStyle {
+	/*font-weight: bold;*/
+	/*border: red;*/
+	width: 70px;
+	height: 22px;
+	background-image: linear-gradient(white, rgb(234, 213, 159), white);
+    /* background: linear-gradient(to top, rgb(246, 244, 228) 0%, #d7d497 10%, rgb(233, 206, 158) 50%, #fbfdcf 70%, rgb(247, 241, 206) 85%, rgb(250, 249, 239) 100%); */
+    /* background: linear-gradient(to top, #76c7c0 0%, lime 50%, #B2FFBC 70%, lime 100%); */
+    border-radius: 8px;
+	cursor: pointer;
+}
+
+.doneButtonStyle {
+	/*font-weight: bold;*/
+	/*color: white;*/
+	width: 50px;
+	height: 22px;
+	background-image: linear-gradient(white, rgb(133, 231, 177), white);
+    border-radius: 8px;
+	cursor: pointer;
+}
+
+
+
+.fa-check {
+    color: green;
+    font-weight: bold;
+}
+
+.refreshButtonStyle {
+	/*font-weight: bold;*/
+	width: 38px;
+	height: 22px;
+	background-image: linear-gradient(white, rgb(138, 211, 236), white);
+    border-radius: 8px;
+	cursor: pointer;
+}
+
+.deleteButtonStyle {
+    width: 35px;
+	height: 22px;
+	background-image: linear-gradient(white, rgb(232, 168, 163), white);
+    border-radius: 8px;
+	cursor: pointer;
+}
+
+.fa-trash {
+    color: rgb(38, 39, 38);
+    font-size: 15px !important;
+    color: rgb(99, 98, 98);
+}
+
+.buttonCellBackground {
+    background-color: white;
+    /* background-image: linear-gradient(rgb(244, 243, 243), rgb(244, 243, 243), rgb(244, 243, 243)); */
+}
+
+.highlightProcess {
+	font-weight: bold;
+	/* background-image: linear-gradient(90deg, white, gold, white, gold, white); */
+    /* background-image: linear-gradient(rgb(252, 252, 180), rgb(253, 253, 146), white); */
+    /* background-color: rgb(253, 253, 146); */
+    background-color: rgb(250, 213, 143);
+    background-image: linear-gradient(white, rgb(250, 213, 143), white);
+}
+
+.fa-refresh {
+    /* color: rgb(134, 104, 223); */
+    color: black;
+    color: rgb(79, 79, 154);
+    transform: scale(.9);
+}
+
+.fa-gear {
+    color: rgb(155, 146, 146);
+    text-shadow: .5px .5px 0px black, -.5px -.5px 0px black, .5px -.5px 0px black, -.5px .5px 0px black;
+}
+
+.highlightDone {
+	font-weight: bold;
+	/* background-image: linear-gradient(330deg, white, white, white, lime, white, white, lime, white, white, lime); */
+    /* background-color: rgb(214, 250, 214); */
+    background-image: linear-gradient(white, rgb(214, 250, 214), white);
+	
+}
+
+.fa-check-square {
+    /* background-image: linear-gradient(white, rgb(104, 254, 104), white); */
+    border-radius: 6px;
+    border-width: 10px;
+    /* color: white; */
+    background: linear-gradient(to top, white 5%, green 10%, rgb(138, 228, 138) 25%, white 50%, rgb(10, 202, 10) 70%, rgb(121, 243, 121) 80%, lime 90%, white 95%, white 100%);
+}
+
+.doneButtonStyle:hover {
+	font-weight: bold;
+	background-image: linear-gradient(white, rgb(170, 255, 170), white);
+
+}
+
+.processButtonStyle:hover {
+	font-weight: bold;
+	background-image: linear-gradient(white, rgb(253, 244, 174), white);
+}
+
+.refreshButtonStyle:hover {
+	font-weight: bold;
+	background-image: linear-gradient(white, rgb(163, 252, 252), white);
+}
+
+.deleteButtonStyle:hover {
+	font-weight: bold;
+	background-image: linear-gradient(white, rgb(251, 215, 210), white);
+}
+
+.doneButtonStyle:hover, .processButtonStyle:hover, .refreshButtonStyle:hover, .deleteButtonStyle:hover  {
+	/*font-size: 10px;*/
+	box-shadow: 1px 3px 8px gray;
+	border-width: 1px;
+}
+
+.noHighLight {
+    background-color: white;
+}
+
+.noHighLight:hover {
+	/* background-image: linear-gradient(330deg, white, white, white, rgb(175, 174, 174), white, white, rgb(198, 197, 197), white, white, rgb(183, 181, 181)); */
+    background-image: linear-gradient(white, rgb(218, 216, 216), white);
+    /* color: white; */
+
+}
+
+
+
+
+/*----- Middle Nav (BOTTOM) ------*/
+
+/*----- Right Nav (TOP) ------*/
+#rightNav {
+    flex: 2;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px dashed lime; */
+}
+
+.policyCover {
+    border: 3px outset rgb(239, 238, 238);
+    border-radius: 6px;
+    width: 90%;
+    margin-left: 20px;
+    backdrop-filter: blur(20px);
+    border-left-width: 1px;
+    border-bottom-width: 2px;
+    /* border-top-color: rgb(221, 221, 221);
+    border-left-color: rgb(183, 183, 183);
+    border-right-color: rgb(168, 164, 164);
+    border-top-width: 3px;
+    border-left-width: 2px;
+    border-right-width: 5px; */
+}
+
+.policyCover:hover {
+    box-shadow: 1px 1px 25px white;
+    transition: box-shadow 0.3s ease;
+}
+
+/* #chart_div {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 90%;
+    height: 50%;
+    border: 3px outset rgb(202, 200, 200);
+    border-top-color: rgb(227, 225, 225);
+    border-radius: 5px;
+    backdrop-filter: blur(50px);
+    border-left-width: 1px;
+    border-bottom-width: 2px;
+} */
+
+#chart {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 90%;
+    height: 50%;
+    border: 3px outset rgb(243, 241, 241);
+    /* border-top-color: rgb(227, 225, 225); */
+    border-radius: 5px;
+    backdrop-filter: blur(50px);
+    border-left-width: 1px;
+    border-bottom-width: 2px;
+}
+
+#chart_div {
+    /* margin-left: 20px;
+    margin-top: 20px; */
+    width: 100%;
+    height: 100%;
+
+}
+
+#chart:hover {
+    box-shadow: 1px 1px 25px white;
+    transition: box-shadow 0.5s ease;
+}
+
+#policyTable {
+    width: 100%;
+    /* margin-left: 20px; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* text-align: center; */
+    /* backdrop-filter: blur(50px); */
+    /* border: 1px solid white; */
+    /* backdrop-filter: blur(18px); */
+
+
+}
+
+.voucherPolicyTitle {
+    background-image: linear-gradient(white, rgb(177, 219, 244), white);
+    border-radius: 4px;
+}
+
+.fa-book {
+    background-color: white;
+    color: navy;
+}
+
+.policyTableStyle {
+    width: 100%;
+    margin-right: 0;
+    border: 1px solid rgb(231, 230, 230);
+}
+
+.blueText {
+    color: blue;
+}
+
+.whiteText {
+    color: white;
+}
+
+.policyContentCoverDiv {
+    width: 97%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: flex-end; */
+}
+
+.whiteCell-centerCell {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    background-image: linear-gradient(to BOTTOM, rgb(211, 211, 211) 0%, white 15%, rgb(239, 237, 237) 50%, white 90%, rgb(222, 220, 220) 100%);
+}
+
+.whiteCell {
+    text-align: right;
+    align-items: center;
+    width: 100%;
+    background-image: linear-gradient(to BOTTOM, rgb(211, 211, 211) 0%, white 15%, rgb(239, 237, 237) 50%, white 90%, rgb(222, 220, 220) 100%);
+}
+
+.jacketTopPadding {
+    padding-top: 6%;
+}
+
+.effectiveDateColor {
+    font-weight: bold;
+    color: rgb(11, 177, 11);
+}
+
+.endDateColor {
+    font-weight: bold;
+    color: rgb(216, 64, 64);
+}
+
+/*----- Right Nav (BOTTOM) ------*/
+
+
+
+
+
+
+
+.blackWordColor {
+    color: black;
+}
+
+
+
+.greenWordColor {
+    color: green;
+
+}
+
+.redWordColor {
+    color: red;
+}
+
+#myDialog {
+    /* display: flex;
+    flex-direction: column;
+    margin-top: 5%; */
+    height: 80%;
+    /* width: 100%; */
+    backdrop-filter: blur(15px);
+    background-color: transparent;
+}
+
+.statusSummary {
+    height: 5%;
+}
+
+.fa-tasks {
+    color: rgb(21, 68, 189);
+}
+
+.tableContainer {
+    height: 80%;
+    overflow: auto;
+}
+
+#myDialog .tableContainer{
+	padding: 10px 50px;
+}
+#myDialog .tableContainer table {
+	width: 800px;
+}
+
+#myDialog button {
+	margin-left: 94%;
+	border-radius: 6px;
+	background-image: linear-gradient(white, silver, white);
+	border: solid silver 1px;
+}
+
+#myDialog button:hover {
+	margin-left: 94%;
+	border-radius: 6px;
+	background-image: linear-gradient(silver, white, silver);
+}
+
+.dialogCloseButton {
+	/*position: absolute;*/
+	padding-bottom: 5px;
+    margin-right: 10%;
+}
+
+
+
+
+
+
+.silver {
+	background-color: gainsboro;
+}
+
+.white {
+	background-color: white;
+}
+
+.modalSection {
+	position: fixed;
+	margin-left: 68.9%;
+	margin-top: 10.2%;
+	z-index: 10;
+}
+
+.textSize {
+	font-weight: bold;
+	font-size: 12px;
+	height: 30px;
+}
+
+.generateButton {
+    height: 24px;
+}
+
+.okayNoticeButton, .generateButton, .addButton, #myDialog button {
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, rgb(192, 207, 206) 0%, transparent 10%, rgb(255, 255, 255) 30%, transparent 40%, rgb(187, 212, 209) 75%, transparent 100%);
+    border-radius: 16px;
+    border: outset rgb(213, 253, 253) 1px;
+	transition: border-width 0.3s, box-shadow 0.3s;
+	cursor: pointer;
+}
+
+.okayNoticeButton:hover, .generateButton:hover, .addButton:hover, #myDialog button:hover {
+    box-shadow: 1px 1px 15px white;
+}
+
+.okayNoticeButton:focus, .generateButton:focus, .addButton:focus, #myDialog button:focus {
+    border: inset rgb(213, 253, 253) 1px;
+}
+
+
+
+/* .okayNoticeButton:hover, .generateButton:hover, .addButton:hover, #myDialog button:hover {
+	background-image: linear-gradient(gainsboro, white, gainsboro);
+	border-radius: 4px;
+	border-style: inset;
+	border: solid white 1px;
+	box-shadow: 1px 1px 15px rgb(226, 224, 224);
+	border-width: .5px;
+
+} */
+
+
+
+/* .centerInputRow .generateButton:hover {
+    width: 49px;
+}
+
+.centerInputRow .generateButton:hover {
+    width: 42px;
+} */
+
+.okayNoticeButton {
+    height: 25px;
+    width: 60px;
+    right: 20px;
+    box-shadow: 1px 1px 10px orange;
+    /* background-image: linear-gradient(white, orange, white); */
+    background-image: linear-gradient(to bottom, rgb(225, 210, 193) 0%, transparent 10%, rgb(255, 255, 255) 30%, transparent 40%, rgb(212, 201, 187) 75%, transparent 100%);
+
+}
+
+.okayNoticeButton:hover {
+    /* width: 50px; */
+    background-image: linear-gradient(to bottom, rgb(192, 207, 206) 0%, transparent 10%, rgb(255, 255, 255) 30%, transparent 40%, rgb(187, 212, 209) 75%, transparent 100%);
+
+}
+
+.filterButton {
+    width: 60%;
+}
+
+.closeNoticeModalDiv {
+    padding-top: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    margin-right: 20px;
+
+}
+
+.fa-cloud-download {
+    color: black;
+    background-image: linear-gradient(to bottom, transparent 0%, cyan 50%, transparent 100%);
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position-x: 30%;
+    background-position-y: 45%;
+}
+
+dialog table {
+	position: relative;
+	flex-direction: column;
+}
+
+dialog {
+	
+	
+    border: 4px solid gray;
+    /*border-image: linear-gradient(to right, #ff7f50, #ff6347, #ff4500) 1;*/
+    border-radius: 8px;
+    border-color: rgb(227, 225, 225);
+    border: 3px outset rgb(235, 234, 234);
+}
+
+.stickyModelTitle th {
+	position: sticky;
+	background-color: white;
+	top: -2.5%;
+	z-index: 2;
+}
+
+.groupTitle th {
+	position: sticky;
+	background-color: white;
+	top: 1%;
+	z-index: 2;
+}
+
+.groupSpecific th {
+	position: sticky;
+	background-color: white;
+	color: black;
+	top: 4.5%;
+	z-index: 5;
+}
+
+/*.addEmp {
+	float: right;
+	margin-left: 300px;
+}*/
+
+.theadBorder {
+	/*border: 1px solid gray;*/
+}
+/*.modalSection button {
+	font-size: 12px;
+	padding: 5px 10px 5px 10px;
+	font-weight: bold;
+	border-radius: 5px;
+	border: outset silver 1px;
+	background-image: linear-gradient(white, silver, white);
+}
+
+.modalSection button:hover {
+	font-size: 12px;
+	padding: 5px 10px 5px 10px;
+	font-weight: bold;
+	border-radius: 5px;
+	border: outset silver 1px;
+	background-image: linear-gradient(white, silver, white);
+}*/
+
+.addButton {
+	cursor: copy;
+}
+
+.voucherTableStyle {
+	color: black;
+	font-size: 18px;
+}
+
+.statusChangeSummary {
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fa-youtube {
+    color: red;
+}
+
+
+
+
+
+
+.processButtonStyle:disabled {
+	background-image: linear-gradient(white, rgb(208, 202, 186), white);
+	width: 65px;
+	height: 20px;
+    color: rgb(240, 240, 240);
+}
+
+.processButtonStyle:disabled:hover {
+    font-weight: normal;
+}
+
+.doneButtonStyle:disabled {
+    width: 45px;
+	height: 20px;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(193, 201, 197), rgb(255, 255, 255));
+    /* border: .8px inset silver; */
+}
+
+.refreshButtonStyle:disabled {
+    width: 34px;
+	height: 20px;
+	background-image: linear-gradient(white, rgb(205, 218, 224), white);
+}
+
+.processButtonStyle:disabled, .doneButtonStyle:disabled, .refreshButtonStyle:disabled {
+    font-size: 12px;
+    box-shadow: 0px 0px 2px gray;
+	border-width: .5px;
+    border: .8px solid silver;
+}
+
+.doneButtonStyle:disabled .fa-check {
+    color: rgb(246, 246, 246);
+    font-weight: bold;
+}
+
+.refreshButtonStyle:disabled .fa-refresh {
+    color: rgb(251, 251, 251);
+}
+
+.cursorNone {
+    cursor: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General body styles for small screens */
+@media (max-width: 768px) {
+    body {
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* overflow-y: auto; */
+        display: block;
+        /* justify-content: ev; */
+    }
+
+    /* Hide some elements that aren't necessary on mobile */
+    #menuNav, #imagesNav {
+        display: none;
+    }
+
+    /* Stack the navigation items vertically */
+    #menuNav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Make the company name smaller and centered */
+    .workCompanyTitle {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .metroLogo {
+        margin-top: 5px;
+        width: 50px;
+        height: auto;
+    }
+
+    /* Adjust header */
+    #header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Filter section should take up full width */
+    #filter {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* For tables, make them scrollable horizontally on small screens */
+    table {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        display: block;
+    }
+
+    /* Adjust the progress bar */
+    .progressBar {
+        width: 100%;
+        height: 10px; /* Smaller height for progress bars */
+    }
+
+    /* Adjust buttons for mobile */
+    .generateButton {
+        width: 100%; /* Full-width buttons on mobile */
+    }
+
+    /* Resize the table text and make it readable */
+    .dataTableSize {
+        font-size: 12px; /* Smaller text for smaller screens */
+    }
+
+    #noticeModalContentCover {
+        margin-top: 5%;
+        width: 100%;
+        height: 110%;
+        /* background-color: red; */
+    }
+    
+    #noticeModalContent {
+
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        justify-content: center;
+        /* background-color: red; */
+    }
+    
+    .noticeModalContentAlignment {
+        width: 100%;
+        height: 100%;
+        margin-top: 0%;
+        /* height: 50%; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* background-color: red; */
+    }
+
+    #bodyNav {
+        display: block;
+    }
+
+    #footer {
+        display: block;
+    }
+
+}
+
+/* For tablets and larger screens, adjust layout for medium devices */
+@media screen and (max-width: 1024px) {
+    #menuNav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menuButton {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .metroLogo {
+        width: 70px;
+    }
+}

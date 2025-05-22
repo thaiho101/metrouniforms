@@ -1,0 +1,334 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../Background_lib/medical_bg1.jpg');
+    background-size: cover;  /* Ensures the image covers the entire body */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    overflow-x: hidden;
+}
+
+#menuNav {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 0; */
+    left: 62%;
+}
+
+.menuButton {
+    color: black;
+    /* text-shadow: -0.7px 0px black, 0px 0.7px black, 0.7px 0px black, 0px -0.7px black; */
+    /* padding: 10px; */
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px outset silver;
+    border-radius: 16px;
+    backdrop-filter: blur(1px);
+    /* background-image: linear-gradient(white, transparent, white); */
+    background-image: linear-gradient(to bottom, rgb(192, 207, 206) 0%, transparent 10%, rgb(255, 255, 255) 30%, transparent 40%, rgb(187, 212, 209) 75%, transparent 100%);
+
+}
+
+#workCompanyDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* height: 108%; */
+    display: flex;
+    flex-direction: row;
+}
+
+.workCompany {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    width: 23%;
+    color: black;
+    font-size: 20px;
+}
+
+.workCompanyTitle {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    margin-left: 20px; 
+    /* color: rgb(74, 74, 242); */
+    color: rgb(69, 106, 255);
+    text-shadow: -0.5px 0px white, 0px 0.5px white, 0.5px 0px white, 0px -0.5px white;
+
+    font-family: "Helvetica Neue", Tahoma, Geneva, sans-serif;
+}
+
+.metroLogo {
+    background-image: url('../logo/metroLogo.png');
+    position: relative;
+    background-size: contain;  /* Ensures the whole image fits within the container */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    background-position: center;  /* Centers the image within the container */
+    width: 60px;
+    height: auto;
+    transform: scale(1.2);
+    margin-top: -10px;
+    margin-left: 5px;
+
+}
+
+
+.menuSrcStyle {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    /* text-shadow: -0.7px 0px black, 0px 0.7px black, 0.7px 0px black, 0px -0.7px black; */
+}
+
+.menuSrcStyle:hover {
+    color: rgb(255, 98, 0);
+}
+
+.menuButton:hover {
+    color: orange;
+}
+
+.paddingHorizontal10 {
+    width: 5px;
+}
+
+#headNav {
+    /* border: 2px solid red;  */
+    /* background-image: url('medical_background1.webp'); */
+    
+    /* height: 100%; */
+    
+    /* background-image: url('medical_background6.jpg'); */
+    background-size: cover;  /* Ensures the image covers the entire body */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 12.5%;
+}
+
+
+
+#footer {
+
+    display: flex;
+    /* border: 2px solid orange; */
+    /* min-height: 120px; */
+    justify-content: center;
+    align-items: flex-end;
+    border-top: 1px solid silver;
+    height: 12.5%;
+
+}
+
+#footer p {
+    /* margin-bottom: 0; */
+    /* min-height: 10%; */
+}
+
+.borderRadius6 {
+    border-radius: 6px;
+}
+
+.button {
+    border-radius: 8px;
+    border-width: 1px;
+    height: 24px;
+}
+
+.dataTableSize {
+    width: 100%;
+}
+
+.centerCell {
+    text-align: center;
+}
+
+.rightCell {
+    text-align: right;
+}
+
+.bottomCell {
+    margin-bottom: 10px;
+}
+
+.spaceBottom {
+    margin-bottom: -10px;
+}
+
+.rightTextCell {
+    text-align: right;
+}
+
+.boldText {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+#bodyNav {
+    height: 80%;
+    width: 98%;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid red;contact */
+}
+
+#contactMenu {
+    /* margin-left: 50px;
+    margin-top: 20px; */
+    width: 100%;
+    height: 80%;
+    border: 3px outset rgb(202, 200, 200);
+    border-top-color: rgb(227, 225, 225);
+    border-radius: 8px;
+    backdrop-filter: blur(2px);
+    border-left-width: 1px;
+    border-bottom-width: 2px;
+
+    /* width: 15%; */
+    height: 100%;
+    /* border: 1px solid blue; */
+    flex: 1;
+    justify-content: center;
+
+    
+}
+
+.firstMenuContactDiv, .secondMenuContactDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+
+
+.contact {
+    /* margin-top: 15px; */
+    /* margin-left: 3px;
+    margin-bottom: 5px; */
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    cursor: pointer;
+}
+
+
+
+.spaceBetween {
+    flex: 0.05;
+}
+
+#contactContent {
+    flex: 5;
+    backdrop-filter: blur(40px);
+    width: 90%;
+    height: 100%;
+    border-radius: 8px;
+    border: 3px outset rgb(202, 200, 200);
+    border-top-color: rgb(227, 225, 225);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border-left-width: 1px;
+    border-bottom-width: 2px;
+}
+
+.ContentDiv {
+    width: 98%;
+    height: 96%;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 8px;
+    border: 3px inset rgb(218, 216, 216);
+    box-shadow: 1px 1px 20px white;
+}
+
+.contactInformation {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainTitle {
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.inputInfo {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid blue; */
+    width: 25%;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    margin-left: 50px;
+}
+
+.inputStyle {
+    width: 200px;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+}
+
+.menuContactButton {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px outset silver;
+    background-image: linear-gradient(white, lightblue, white);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.menuContactButton:hover {
+    background-image: linear-gradient(white, rgb(169, 252, 252), white);
+
+    box-shadow: 1px 1px 15px white;
+}
+
+.menuContactButton:focus {
+    border: 0.5px inset silver;
+}
+
+.chosenMenu {
+    background-image: linear-gradient(white, rgb(166, 246, 246), white);
+    border: 0.5px inset silver;
+    box-shadow: 1px 1px 15px rgb(175, 251, 131);
+}
+
+.invisible {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
