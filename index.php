@@ -1361,7 +1361,7 @@ if($result->num_rows > 0)
 		<p class='orangeWords'>
             Please switch to a larger device for the full experience.
         </p>
-        <p class="noticeSignature">— Developed by Nam Ho</p>
+        <p class="noticeSignature">— Nam Ho | Metro Uniforms Management Tool</p>
     </div>
 </div>
 
