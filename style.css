@@ -9,15 +9,8 @@ body {
     background-position: center;  /* Centers the image */
     background-repeat: no-repeat;  /* Prevents the image from repeating */
     overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
-
-/* #noticeModal {
-    top: 10%;
-    width: 40%;
-    height: 60%;
-    z-index: 100;
-} */
 
 #noticeModal{
     height: 100vh; 
@@ -27,9 +20,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    
-    
 }
 
 .topLine {
@@ -505,7 +495,7 @@ table {
     display: block;
     height: 27%;
     width: 90%;
-    margin-left: 5%;
+    margin-left: 6%;
     border: 3px outset rgb(241, 242, 242);
     margin-bottom: 10px;
     border-radius: 4px;
@@ -513,6 +503,19 @@ table {
     border-left-width: 1px;
     border-bottom-width: 2px;
 }
+
+/* #addEmpNav {
+    display: block;
+    height: 26%;
+    width: 90%;
+    margin-left: 15px;
+    border: 3px outset rgb(241, 242, 242);
+    border-radius: 4px;
+    backdrop-filter: blur(2px);
+    border-left-width: 1px;
+    border-bottom-width: 2px;
+    outline: none;
+} */
 
 #filter:hover {
     box-shadow: 1px 1px 25px white;
@@ -578,7 +581,24 @@ table {
     /* border-color: rgb(0, 179, 255); */
 }
 
+.addEmpTitleInput {
+
+
+        display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 20px;
+    margin-left: 5%;
+}
+
+.addEmpTitle {
+    flex: 1;
+}
+
 .addEmpInputStyle {
+    flex: 1;
+    display: flex;
     border: 1px outset rgb(147, 146, 146);
     /* background-color: #f7e9e9; */
     background-color: transparent;
@@ -586,6 +606,7 @@ table {
     height: 80%;
     background-image: linear-gradient(to bottom, rgb(192, 207, 206) 0%, transparent 10%, rgb(255, 255, 255) 30%, transparent 40%, rgb(187, 212, 209) 75%, transparent 100%);
     border-radius: 50px;
+    width: 50%;
     outline: none;
 }
 
@@ -608,7 +629,7 @@ table {
 #voucherAndSummaryTableNav {
     height: 39%;
     width: 90%;
-    margin-left: 15px;
+    margin-left: 6%;
     border: 3px outset rgb(252, 255, 255);
     border-radius: 4px;
     /* backdrop-filter: blur(25px); */
@@ -849,7 +870,7 @@ background-color: white;
     display: block;
     height: 26%;
     width: 90%;
-    margin-left: 15px;
+    margin-left: 6%;
     border: 3px outset rgb(241, 242, 242);
     border-radius: 4px;
     /* justify-content: center; */
@@ -1724,6 +1745,63 @@ dialog {
 }
 
 
+#smallScreenNotice {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    body > *:not(#smallScreenNotice) {
+        display: none !important;
+    }
+
+    #smallScreenNotice {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fcd8b4;
+        color: #333;
+        text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        /* padding: 40px; */
+        width: 100vw;
+        height: 100vh;
+        z-index: 9999;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .noticeContentBox {
+        max-width: 70%;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .noticeContentBox h2 {
+        color: #c0392b;
+        margin-bottom: 15px;
+    }
+
+    .noticeContentBox p {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    .orangeWords {
+    color: orange;
+    }
+
+    .noticeSignature {
+        margin-top: 20px;
+        font-style: italic;
+        font-weight: bold;
+        color: #555;
+    }
+}
+
+
 
 
 
@@ -1769,126 +1847,6 @@ dialog {
 
 /* General body styles for small screens */
 @media (max-width: 768px) {
-    body {
-
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        /* overflow-y: auto; */
-        display: block;
-        /* justify-content: ev; */
-    }
-
-    /* Hide some elements that aren't necessary on mobile */
-    #menuNav, #imagesNav {
-        display: none;
-    }
-
-    /* Stack the navigation items vertically */
-    #menuNav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Make the company name smaller and centered */
-    .workCompanyTitle {
-        text-align: center;
-        font-size: 18px;
-    }
-
-    .metroLogo {
-        margin-top: 5px;
-        width: 50px;
-        height: auto;
-    }
-
-    /* Adjust header */
-    #header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Filter section should take up full width */
-    #filter {
-        width: 100%;
-        padding: 10px;
-    }
-
-    /* For tables, make them scrollable horizontally on small screens */
-    table {
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        display: block;
-    }
-
-    /* Adjust the progress bar */
-    .progressBar {
-        width: 100%;
-        height: 10px; /* Smaller height for progress bars */
-    }
-
-    /* Adjust buttons for mobile */
-    .generateButton {
-        width: 100%; /* Full-width buttons on mobile */
-    }
-
-    /* Resize the table text and make it readable */
-    .dataTableSize {
-        font-size: 12px; /* Smaller text for smaller screens */
-    }
-
-    #noticeModalContentCover {
-        margin-top: 5%;
-        width: 100%;
-        height: 110%;
-        /* background-color: red; */
-    }
-    
-    #noticeModalContent {
-
-        width: 100%;
-        height: 100%;
-        z-index: 100;
-        justify-content: center;
-        /* background-color: red; */
-    }
-    
-    .noticeModalContentAlignment {
-        width: 100%;
-        height: 100%;
-        margin-top: 0%;
-        /* height: 50%; */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* background-color: red; */
-    }
-
-    #bodyNav {
-        display: block;
-    }
-
-    #footer {
-        display: block;
-    }
 
 }
 
-/* For tablets and larger screens, adjust layout for medium devices */
-@media screen and (max-width: 1024px) {
-    #menuNav {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .menuButton {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    .metroLogo {
-        width: 70px;
-    }
-}

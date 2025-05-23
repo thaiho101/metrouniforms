@@ -390,7 +390,7 @@ if ($_SESSION['visited']) {
 
 					<div id='filterButton'>
 						<div class='centerInputRow'>
-							<BUTTON type='submit' name='filter' class='button generateButton filterButton'>Filter</BUTTON>
+							<BUTTON type='submit' name='filter' class='button generateButton'>Filter</BUTTON>
 						</div>
 					</div>
 				</form>
@@ -847,22 +847,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add'])) {
 			<div id='addEmpTitle'><i class="fa fa-user-plus"></i> Add New Employee</div>
 			<form method='post' class='addEmpMethod' onsubmit='return confirmAddNewEmp(this);'>
 				<div class='addEmpDetails'>
-					<div class='centerInputRow'>
-						<div><label for='employeeID' type='text' class=''>Employee ID</label></div>
-						<div><input type="text" name="employeeID" id='employeeID' class='boxInput borderRadius6 addEmpInputStyle' required></div>
+					<div class='addEmpTitleInput'>
+						<label for='employeeID' type='text' class='addEmpTitle'>Employee ID</label>
+						<input type="text" name="employeeID" id='employeeID' class='boxInput borderRadius6 addEmpInputStyle' required>
 					</div>
 				</div>
 				
 				<div class='addEmpDetails'>
-					<div class='centerInputRow'>
-						<label for='firstName' type='text' class=''>First Name</label>
+					<div class='addEmpTitleInput'>
+						<label for='firstName' type='text' class='addEmpTitle'>First Name</label>
 						<input type="text" name="firstName" id='firstName' class='boxInput borderRadius6 addEmpInputStyle' required>
 					</div>
 				</div>
 
 				<div class='addEmpDetails'>
-					<div class='centerInputRow'>
-						<label for='lastName' type='text' class=''>Last Name</label>
+					<div class='addEmpTitleInput'>
+						<label for='lastName' type='text' class='addEmpTitle'>Last Name</label>
 						<input type="text" name="lastName" id='lastName' class='boxInput borderRadius6 addEmpInputStyle' required>
 					</div>
 				</div>
@@ -1349,6 +1349,21 @@ if($result->num_rows > 0)
 </div>
 </dialog>
 
+<div id="smallScreenNotice">
+    <div class="noticeContentBox">
+        <h2>Limited Mobile Support</h2>
+        <p>
+            This site is best viewed on a <strong>laptop or desktop</strong> for full access to all features and functions.
+        </p>
+        <p>
+            We appreciate your understanding and look forward to serving you on a larger screen.
+        </p>
+		<p class='orangeWords'>
+            Please switch to a larger device for the full experience.
+        </p>
+        <p class="noticeSignature">— Developed by Nam Ho</p>
+    </div>
+</div>
 
 
 
