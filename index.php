@@ -457,13 +457,15 @@ if ($_SESSION['visited']) {
 							var warningMes = document.getElementById('warningMes'); 
 							if (warningMes) {
 								warningMes.addEventListener('mouseover', (event) => {
-							
 									filter.style.boxShadow = '1px 1px 25px red';
-									// filter.style.backgroundColor = 'red';
+									filter.style.transition = 'transform 1s';
+									filter.style.transform = 'scaleX(1.1)';
 								});
 
 								warningMes.addEventListener('mouseout', (event) => {
 									filter.style.boxShadow = '1px 1px 25px white';
+									filter.style.transition = 'transform .5s';
+									filter.style.transform = 'scaleX(1)';
 								});
 							}  
 							});
