@@ -194,16 +194,17 @@ body {
     flex-direction: row;
     width: 23%;
     color: black;
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 
 .workCompanyTitle {
+    font-size: 1rem;
     display: flex;
     flex-direction: row;
     text-decoration: none;
-    margin-left: 20px; 
+    margin-left: 10px; 
     /* color: rgb(74, 74, 242); */
-    color: rgb(69, 106, 255);
+    color: rgb(9, 37, 150);
     text-shadow: -0.5px 0px white, 0px 0.5px white, 0.5px 0px white, 0px -0.5px white;
 
     font-family: "Helvetica Neue", Tahoma, Geneva, sans-serif;

@@ -2,6 +2,12 @@
 ob_start();
 session_start(); // Start the session
 
+$isDemo = true;
+$demoMessage = "Public demo mode: editing actions are disabled.";
+
+$defaultCompany = 'Healthcare System A';	//For Demo
+$defaultGroup   = 'Group A';				//For Demo
+$currentCompany = isset($_GET['companyName']) ? $_GET['companyName'] : $defaultCompany;	//For Demo
 
 require_once("./config.php");
 $servername = DB_SERVER;
@@ -138,53 +144,61 @@ if ($_SESSION['visited']) {
 				<div id="dataSecurityInfo">
 					<div class='noticeContent'>
 						<div class='summaryTitleStyle' style='height: 35px;'>Summary:</div>
-						<div>This page is part of the Metro Uniforms management platform designed to track and manage employee voucher status for Organizations (e.g., UT Southwestern), 
-							specifically related to Groups (ARC/PFAS). 
+						<div>
+							This page is part of an employee voucher management system designed to track and manage voucher status for organizations and employee groups.
 						</div>
 						<div style='height: 10px;'></div>
 						<div>
-						The interface provides an overview of employees, their voucher statuses, and completion progress. 
-						Users can filter employees, track completion statuses, generate CSV reports, and view data visualizations about voucher usage and employee engagement.
+							The interface provides an overview of employees, voucher status, and completion progress. Users can filter employee records, monitor completion status, generate CSV reports, and review visual insights related to voucher activity and engagement.
 						</div>
 						
-						<div class='keyFeatureTitleStyle'  style='height: 15px; padding-top: 10px;'>Key Features:</div>
+						<div class='keyFeatureTitleStyle' style='height: 15px; padding-top: 10px;'>Key Features:</div>
 						<div class='verticalSpace5px'></div>
+
 						<div class='displayFlexRow'>
 							<div class='fontBoldandWidth'> • Employee Tracking:</div> 
-							<div class='leftAlignment'>See a list of employees along with their voucher statuses and progress.</div>
+							<div class='leftAlignment'>View employee records together with their voucher status and progress.</div>
 						</div>
+
 						<div class='verticalSpace5px'></div>
 						<div class='displayFlexRow'>
 							<div class='fontBoldandWidth'> • Voucher Policy:</div> 
-							<div class='leftAlignment'>Display voucher details like discount, effective dates, and available options.</div>
+							<div class='leftAlignment'>Display voucher information such as discount, effective dates, and available options.</div>
 						</div>
+
 						<div class='verticalSpace5px'></div>
 						<div class='displayFlexRow'>
 							<div class='fontBoldandWidth'> • Completion Summary:</div> 
-							<div class='leftAlignment'>Overview of employee completion statuses, including pending and completed tasks.</div>
+							<div class='leftAlignment'>Provide a summary of employee completion status, including completed and pending records.</div>
 						</div>
+
 						<div class='verticalSpace5px'></div>
 						<div class='displayFlexRow'>
 							<div class='fontBoldandWidth'> • Data Reporting:</div> 
-							<div class='leftAlignment'>Option to generate CSV files of employee data.</div>
+							<div class='leftAlignment'>Generate CSV reports for employee voucher data.</div>
 						</div>
+
 						<div class='verticalSpace5px'></div>
 						<div class='displayFlexRow'>
 							<div class='fontBoldandWidth'> • Visualization:</div> 
-							<div class='leftAlignment'>A graph of the most frequent weekdays for voucher usage, with an analysis of time behavior for male and female customers from selection to checkout.</div>
+							<div class='leftAlignment'>Display charts that summarize voucher activity and usage patterns.</div>
 						</div>
+
 						<div class='verticalSpace5px'></div>
 						<div id='notice'>
 							<div id='noticeContent'>
 								<div style='height: 3px;'></div>
 								<div class='noticeTitleStyle'>Notice:</div>
 								<div class='verticalSpace5px'></div>
-								<div class='italicStyle'>The employee data on this platform is fictional and used solely for the prototype. No real employee information is included, and all data is protected to respect my former company and comply with privacy guidelines.</div>
+								<div class='italicStyle'>
+									All employee and organization data shown in this system is fictional and used for demonstration purposes only. No real personal or company data is included in this prototype.
+								</div>
 								<div class='verticalSpace5px'></div>
 							</div>
 						</div>
+
 						<div class='noticeFooter' style='margin-top: 5%;'>Designed and Developed by Nam Ho</div>
-                        <div class='noticeFooter'>Metro Uniforms Management Tool</div>
+                        <div class='noticeFooter'>Uniform Voucher Management System</div>
 					</div>
 				</div>
 			</div>
@@ -214,8 +228,8 @@ if ($_SESSION['visited']) {
 	<div id='workCompanyDiv'>
 		<div class='workCompany'>
 			<a href="./" class='workCompanyTitle'>
-				<div><h1>Metro Uniforms</h1></div>
-				<div class='metroLogo'></div>
+				<div><h1>Uniform Voucher Management</h1></div>
+				<div class=''></div>
 			</a>
 		</div>
 		<div id='imagesNav'>
@@ -479,6 +493,11 @@ if ($_SESSION['visited']) {
 
 //------------- [Add New Employee Function] ------------- [Top]
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add'])) {
+	if ($isDemo) {
+        $_SESSION['employee_exist'] = "Public demo mode: add action is disabled.";
+        header("Location: " . $_SERVER['REQUEST_URI']);
+        exit();
+    }
     $group_id = isset($_SESSION['group_id']) ? $_SESSION['group_id'] : 0;
 
     if ($group_id != 0) {
@@ -526,6 +545,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add'])) {
 //------------- [Processing Button Function] ------------- [Top]
 				
 				if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['processing_status'])) {
+					if ($isDemo) {
+						header("Location: " . $_SERVER['REQUEST_URI']);
+						exit();
+					}
 					$group_id = isset($_SESSION['group_id']) ? $_SESSION['group_id'] : 0;
 					// Ensure that both emp_id and group_id are set
 					if (isset($_POST['emp_id']) && $group_id != 0) {
@@ -566,6 +589,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add'])) {
 
 //------------- [Done Button Function] ------------- [Top]
 				if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_status'])) {
+					if ($isDemo) {
+						header("Location: " . $_SERVER['REQUEST_URI']);
+						exit();
+					}
 					$group_id = isset($_SESSION['group_id']) ? $_SESSION['group_id'] : 0;
 					// Ensure that both emp_id and group_id are set
 					if (isset($_POST['emp_id']) && $group_id != 0) {
@@ -605,6 +632,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add'])) {
 
 //------------- [Refreshing Button Function] ------------- [Top]
 				if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['refresh_status'])) {
+					if ($isDemo) {
+						header("Location: " . $_SERVER['REQUEST_URI']);
+						exit();
+					}
 					$group_id = isset($_SESSION['group_id']) ? $_SESSION['group_id'] : 0;
 					// Ensure that both emp_id and group_id are set
 					if (isset($_POST['emp_id']) && $group_id != 0) {
@@ -644,6 +675,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add'])) {
 
 //------------- [Deleting Button Function] ------------- [Top]
 				if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_status'])) {
+					if ($isDemo) {
+						header("Location: " . $_SERVER['REQUEST_URI']);
+						exit();
+					}
 					$group_id = isset($_SESSION['group_id']) ? $_SESSION['group_id'] : 0;
 					// Ensure that both emp_id and group_id are set
 					if (isset($_POST['emp_id']) && $group_id != 0) {
@@ -847,7 +882,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add'])) {
 		<div id='addEmpNav'>
 			<div class='cyanBorder'>
 			<div id='addEmpTitle'><i class="fa fa-user-plus"></i> Add New Employee</div>
-			<form method='post' class='addEmpMethod' onsubmit='return confirmAddNewEmp(this);'>
+			<form method='post' class='addEmpMethod'
+      		onsubmit="<?php echo $isDemo ? "alert('$demoMessage'); return false;" : "return confirmAddNewEmp(this);"; ?>">
 				<div class='addEmpDetails'>
 					<div class='addEmpTitleInput'>
 						<label for='employeeID' type='text' class='addEmpTitle'>Employee ID</label>
@@ -957,6 +993,22 @@ if ($groupName == 'ARC') {
 									$disabledDoneButton = "";
 									$disabledRefreshButton = "disabled style='cursor: default;'";
 							}
+							$processOnsubmit = $isDemo
+												? "alert('$demoMessage'); return false;"
+												: "return confirmProcessing(this);";
+
+											$doneOnsubmit = $isDemo
+												? "alert('$demoMessage'); return false;"
+												: "return confirmDone(this);";
+
+											$refreshOnsubmit = $isDemo
+												? "alert('$demoMessage'); return false;"
+												: "return confirmRefresh(this);";
+
+											$deleteOnsubmit = $isDemo
+												? "alert('$demoMessage'); return false;"
+												: "return confirmDelete(this);";
+
 							echo "<tr class='contentRow transparentCell cellBorder $highlightRowStatusDone $highlightRowStatusProcess'>
 										<td class='numPercent cellBorder centerCell'>" . $employee_count . "</td>
 										<td class='eidPercent centerCell cellBorder'>" . $row['employee_id'] . "</td>
@@ -964,7 +1016,7 @@ if ($groupName == 'ARC') {
 										<td class='lnPercent centerCell cellBorder'>" . $row['last_name'] . "</td>
 										<td class='statusPercent centerCell cellBorder'>" . $row['status'] . " " . $doneSymbolStatus . "</td>
 										<td class='processPercent centerCell cellBorder buttonCellBackground'>
-											<form method='post' onsubmit='return confirmProcessing(this);'>
+											<form method='post' onsubmit=\"" . $processOnsubmit . "\">
 												<input type='hidden' name='emp_id' value='" . $row['employee_id'] . "'>
 												<input type='hidden' name='first_name' value='" . $row['first_name'] . "'>
 												<input type='hidden' name='last_name' value='" . $row['last_name'] . "'>
@@ -972,7 +1024,7 @@ if ($groupName == 'ARC') {
 											</form>
 										</td>
 										<td class='donePercent centerCell cellBorder buttonCellBackground'>
-											<form method='post' onsubmit='return confirmDone(this);'>
+											<form method='post' onsubmit=\"" . $doneOnsubmit . "\">
 												<input type='hidden' name='emp_id' value='" . $row['employee_id'] . "'>
 												<input type='hidden' name='first_name' value='" . $row['first_name'] . "'>
 												<input type='hidden' name='last_name' value='" . $row['last_name'] . "'>
@@ -982,7 +1034,7 @@ if ($groupName == 'ARC') {
 											</form>
 										</td>
 										<td class='refreshPercent centerCell cellBorder buttonCellBackground'>
-											<form method='post' onsubmit='return confirmRefresh(this);'>
+											<form method='post' onsubmit=\"" . $refreshOnsubmit . "\">
 												<input type='hidden' name='emp_id' value='" . $row['employee_id'] . "'>
 												<input type='hidden' name='first_name' value='" . $row['first_name'] . "'>
 												<input type='hidden' name='last_name' value='" . $row['last_name'] . "'>
@@ -992,7 +1044,7 @@ if ($groupName == 'ARC') {
 											</form>
 										</td>
 										<td class='refreshPercent centerCell cellBorder buttonCellBackground'>
-											<form method='post' onsubmit='return confirmDelete(this);'>
+											<form method='post' onsubmit=\"" . $deleteOnsubmit . "\">
 												<input type='hidden' name='emp_id' value='" . $row['employee_id'] . "'>
 												<input type='hidden' name='first_name' value='" . $row['first_name'] . "'>
 												<input type='hidden' name='last_name' value='" . $row['last_name'] . "'>
@@ -1253,16 +1305,7 @@ if (contentRows.length === refreshButton.length && refreshButton.length === refr
 
 <div id='footer'>
 	<div class='expandVertical'></div>
-	<div class='organizationLogo'>
-		<!-- <div class='expandSpace'></div> -->
-		<img src="./logo/metroScrubLogo.jpg" alt="" onclick="window.open('http://www.metrouniforms.com', 'blank');" style='cursor: pointer;'>
-		<div class='expandSpace'></div>
-		<img src="./logo/mentclinicLogo.jpg" alt="">
-		<div class='expandSpace'></div>
-		<img src="./logo/utswLogo.jpg" alt="">
-		<div class='expandSpace'></div>
-		<img src="./logo/barcoLogo.webp" alt="">
-	</div>
+
 
 	<!-- <div class='centerCell bottomCell'> -->
 		
@@ -1271,7 +1314,7 @@ if (contentRows.length === refreshButton.length && refreshButton.length === refr
 			<i class='fab fa-youtube'></i> Picky Cat Soul
 		</a>
 	</div> -->
-	<div class='footerContent'>&copy; <?php echo date('Y');?> Metro Uniforms. All rights reserved. Created by Nam Ho.</div>
+	<div class='footerContent'>&copy; <?php echo date('Y');?> Uniform Voucher Management — Developed by Nam Ho</div>
 
 </div>
 
