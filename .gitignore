@@ -2,3 +2,5 @@ config.php
 **/.DS_Store
 .DS_Store
 app.php
+**/config.php
+**/app.php
