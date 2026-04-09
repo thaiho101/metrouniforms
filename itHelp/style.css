@@ -58,14 +58,14 @@ body {
     text-decoration: none;
     margin-left: 20px; 
     /* color: rgb(74, 74, 242); */
-    color: rgb(69, 106, 255);
+    color: rgb(9, 37, 150);
     text-shadow: -0.5px 0px white, 0px 0.5px white, 0.5px 0px white, 0px -0.5px white;
 
     font-family: "Helvetica Neue", Tahoma, Geneva, sans-serif;
 }
 
 .metroLogo {
-    background-image: url('../logo/metroLogo.png');
+    /* background-image: url('../logo/metroLogo.png'); */
     position: relative;
     background-size: contain;  /* Ensures the whole image fits within the container */
     background-repeat: no-repeat;  /* Prevents the image from repeating */

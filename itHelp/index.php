@@ -17,8 +17,7 @@ session_start(); // Start the session
 <head>
     <meta charset="UTF-8">
     <title> <?php echo $group; ?></title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/tools/Logo/UT.png">
+    <link rel="stylesheet" href="style.css?v=3">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,7 +25,7 @@ session_start(); // Start the session
 
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
 
 </head>
 <body>
@@ -37,23 +36,19 @@ session_start(); // Start the session
 			</a>
 		</div>
 		<div class='paddingHorizontal10'></div>
-		<div class='menu2 menuButton'>
-			<a href="../" class='menuSrcStyle'>Manual</a>
-		</div>
-		<div class='paddingHorizontal10'></div>
 		<div class='menu3 menuButton'>
 			<a href="./" class='menuSrcStyle'>Setting</a>
 		</div>
 		<div class='paddingHorizontal10'></div>
 		<div class='menu4 menuButton'>
-			<a href="./" class='menuSrcStyle'>IT Help</a>
+			<a href="./itHelp/index.php" class='menuSrcStyle'>IT Help</a>
 		</div>
 	</div>
 	<div id='workCompanyDiv'>
 		<div class='workCompany'>
 			<a href="../" class='workCompanyTitle'>
-				<div><h1>Metro Uniforms</h1></div>
-				<div class='metroLogo'></div>
+				<div><h1>IT Help</h1></div>
+				<div class=''></div>
 			</a>
 		</div>
 
@@ -110,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 <div class='contactInformation'>
                     <div class='inputInfo'>
                         <div>Name:</div>
-                        <input type="text" class='inputStyle' value='Henry'>
+                        <input type="text" class='inputStyle' value='Andy'>
                     </div>
                     <div class='inputInfo'>
                         <div>Hot-Line: </div>
@@ -118,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     </div>
                     <div class='inputInfo'>
                         <div>Email: </div>
-                        <input type="text" class='inputStyle' value='warehouse@crowndigi.com'>
+                        <input type="text" class='inputStyle' value='warehouse@uniform-company.com'>
                     </div>
                 </div>
             </div>
@@ -141,7 +136,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     </div>
 </div>
 
-<script src='script.js'></script>
 </body>
 </html>
 <?php
