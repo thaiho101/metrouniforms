@@ -2,7 +2,6 @@
 ob_start();
 session_start(); // Start the session
 
-$isDemo = true;
 $demoMessage = "Public demo mode: editing actions are disabled.";
 
 $defaultCompany = 'Healthcare System A';	//For Demo
