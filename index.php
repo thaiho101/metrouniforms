@@ -71,7 +71,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cvs_File']))
     <meta charset="UTF-8">
     <title> <?php echo $group; ?></title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/logo/metroLogo.png">
+    <link rel="icon" type="image/x-icon" href="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -208,16 +208,12 @@ if ($_SESSION['visited']) {
 			</a>
 		</div>
 		<div class='paddingHorizontal10'></div>
-		<div class='menu2 menuButton'>
-			<a href="./" class='menuSrcStyle'>Manual</a>
-		</div>
-		<div class='paddingHorizontal10'></div>
 		<div class='menu3 menuButton'>
 			<a href="./" class='menuSrcStyle'>Setting</a>
 		</div>
 		<div class='paddingHorizontal10'></div>
 		<div class='menu4 menuButton'>
-			<a href="./itHelp" class='menuSrcStyle'>IT Help</a>
+			<a href="./itHelp/index.php" class='menuSrcStyle'>IT Help</a>
 		</div>
 	</div>
 	<div id='workCompanyDiv'>
