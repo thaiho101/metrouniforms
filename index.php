@@ -1,14 +1,10 @@
 <?php
 ob_start();
 session_start(); // Start the session
-require_once('./app.php');
+require_once('./config/app.php');
 $demoMessage = "Public demo mode: editing actions are disabled.";
 
-$defaultCompany = 'Healthcare System A';	//For Demo
-$defaultGroup   = 'Group A';				//For Demo
-$currentCompany = isset($_GET['companyName']) ? $_GET['companyName'] : $defaultCompany;	//For Demo
-
-require_once("./config.php");
+require_once("./config/config.php");
 $servername = DB_SERVER;
 $username = DB_USERNAME;
 $password = DB_PASSWORD;
